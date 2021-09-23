@@ -21,9 +21,7 @@ export const sharedConfig: UserConfig = {
     AutoImport({
       imports: [
         {
-          'webextension-polyfill': [
-            ['default', 'browser'],
-          ],
+          'webextension-polyfill': [['default', 'browser']],
         },
       ],
       dts: r('src/auto-imports.d.ts'),
@@ -40,9 +38,7 @@ export const sharedConfig: UserConfig = {
     },
   ],
   optimizeDeps: {
-    include: [
-      'webextension-polyfill',
-    ],
+    include: ['webextension-polyfill'],
   },
 }
 
@@ -75,7 +71,7 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       ...sharedConfig.plugins!,
-  
+
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS({
         config: windiConfig,

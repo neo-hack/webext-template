@@ -4,7 +4,7 @@ import type PkgType from '../package.json'
 import { isDev, port, r } from '../scripts/utils'
 
 export async function getManifest() {
-  const pkg = await fs.readJSON(r('package.json')) as typeof PkgType
+  const pkg = (await fs.readJSON(r('package.json'))) as typeof PkgType
 
   // update this file to update this manifest.json
   // can also be conditional based on your need
@@ -31,20 +31,14 @@ export async function getManifest() {
       48: './assets/icon-512.png',
       128: './assets/icon-512.png',
     },
-    permissions: [
-      'tabs',
-      'storage',
-      'activeTab',
-      'http://*/',
-      'https://*/',
+    permissions: ['tabs', 'storage', 'activeTab', 'http://*/', 'https://*/'],
+    content_scripts: [
+      {
+        matches: ['http://*/*', 'https://*/*'],
+        js: ['./dist/contentScripts/index.global.js'],
+      },
     ],
-    content_scripts: [{
-      matches: ['http://*/*', 'https://*/*'],
-      js: ['./dist/contentScripts/index.global.js'],
-    }],
-    web_accessible_resources: [
-      'dist/contentScripts/style.css',
-    ],
+    web_accessible_resources: ['dist/contentScripts/style.css'],
   }
 
   if (isDev) {
