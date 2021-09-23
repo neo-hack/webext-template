@@ -1,9 +1,7 @@
 {
-  "name": "pintersheet",
-  "displayName": "Vitesse WebExt",
+  "name": "@aiou/webext-template",
   "version": "0.0.1",
-  "description": "[description]",
-  "private": true,
+  "description": "webext template powered by vite and react",
   "scripts": {
     "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
     "dev:prepare": "esno scripts/prepare.ts",
