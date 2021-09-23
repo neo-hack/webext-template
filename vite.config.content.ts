@@ -12,7 +12,6 @@ export default defineConfig({
       ? {
         include: [
           r('src/contentScripts/**/*'),
-          r('src/components/**/*'),
         ],
       }
       : undefined,
@@ -21,7 +20,7 @@ export default defineConfig({
     emptyOutDir: false,
     sourcemap: isDev ? 'inline' : false,
     lib: {
-      entry: r('src/contentScripts/index.ts'),
+      entry: r('src/contentScripts/index.tsx'),
       formats: ['es'],
     },
     rollupOptions: {
