@@ -1,7 +1,7 @@
 import { defineConfig, UserConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import WindiCSS from 'vite-plugin-windicss'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-refresh'
 import windiConfig from './windi.config'
 import { r, port, isDev } from './scripts/utils'
 
@@ -17,7 +17,7 @@ export const sharedConfig: UserConfig = {
   },
   plugins: [
     // bad
-    // react(),
+    react(),
     AutoImport({
       imports: [
         {
@@ -43,7 +43,6 @@ export const sharedConfig: UserConfig = {
 }
 
 export default defineConfig(({ command }) => {
-  console.log(command)
   return {
     ...sharedConfig,
     base: command === 'serve' ? `http://localhost:${port}/` : undefined,
