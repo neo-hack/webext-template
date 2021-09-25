@@ -1,4 +1,5 @@
 # @aiou/webext-template
+**a fork version of (vitesse-webext)[https://github.com/antfu/vitesse-webext], but with react**
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
 
