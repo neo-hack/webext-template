@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import WindiCSS from 'vite-plugin-windicss'
+import StyledWindiCSS from 'vite-plugin-styled-windicss'
 import { sharedConfig } from './vite.config'
 import { r, isDev } from './scripts/utils'
 import windiConfig from './windi.config'
@@ -38,5 +39,6 @@ export default defineConfig({
         preflight: false,
       },
     }),
+    StyledWindiCSS(),
   ],
 })

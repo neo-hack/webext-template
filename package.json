@@ -29,7 +29,8 @@
   "dependencies": {
     "document-ready": "^2.0.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@aiou/eslint-config": "^0.2.2",
@@ -39,6 +40,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.14",
     "@types/webextension-polyfill": "^0.8.0",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@vitejs/plugin-react": "^1.0.0",
@@ -59,6 +61,7 @@
     "typescript": "^4.4.2",
     "unplugin-auto-import": "^0.4.5",
     "vite": "^2.5.4",
+    "vite-plugin-styled-windicss": "^1.0.1",
     "vite-plugin-windicss": "^1.4.2",
     "web-ext": "^6.3.0",
     "webext-bridge": "^4.1.1",

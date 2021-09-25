@@ -13,7 +13,6 @@ async function stubIndexHtml() {
   for (const view of views) {
     await fs.ensureDir(r(`extension/dist/${view}`))
     let data = await fs.readFile(r(`src/${view}/index.html`), 'utf-8')
-    console.log(data)
     data = data
       .replace('"./main.tsx"', `"http://localhost:${port}/${view}/main.tsx"`)
       .replace(
@@ -26,11 +25,16 @@ async function stubIndexHtml() {
   }
 }
 
+function copyPublicAssets() {
+  fs.copy(r('public/assets'), r('extension/assets'))
+}
+
 function writeManifest() {
   execSync('npx esno ./scripts/manifest.ts', { stdio: 'inherit' })
 }
 
 writeManifest()
+copyPublicAssets()
 
 if (isDev) {
   stubIndexHtml()

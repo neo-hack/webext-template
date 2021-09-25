@@ -1,6 +1,7 @@
 import { defineConfig, UserConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import WindiCSS from 'vite-plugin-windicss'
+import StyledWindiCSS from 'vite-plugin-styled-windicss'
 import react from '@vitejs/plugin-react-refresh'
 import windiConfig from './windi.config'
 import { r, port, isDev } from './scripts/utils'
@@ -16,7 +17,6 @@ export const sharedConfig: UserConfig = {
     __DEV__: isDev,
   },
   plugins: [
-    // bad
     react(),
     AutoImport({
       imports: [
@@ -75,6 +75,7 @@ export default defineConfig(({ command }) => {
       WindiCSS({
         config: windiConfig,
       }),
+      StyledWindiCSS(),
     ],
   }
 })
