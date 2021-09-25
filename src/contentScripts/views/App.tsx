@@ -1,5 +1,11 @@
 import React from 'react'
+import { Container } from './style'
 
-export const ContentScripts = () => {
-  return <div>ContentScripts</div>
+export const App = () => {
+  return (
+    <Container>
+      6
+      <div className="inner" />
+    </Container>
+  )
 }

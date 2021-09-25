@@ -1,27 +1,21 @@
+/* eslint-disable no-console */
 import React from 'react'
+import { onMessage } from 'webext-bridge'
+import { App } from './views/App'
 import { render } from 'react-dom'
-import { ContentScripts } from './views/App'
 
-function mountApp() {
-  new Promise((resolve) => {
-    console.info('start mount react on app element')
-    return resolve(true)
+// Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
+;(() => {
+  console.info('[webext-template] Hello world from content script')
+
+  // communication example: send previous tab title from background page
+  onMessage('tab-prev', ({ data }) => {
+    console.log(`[webext-template] Navigate from page "${data.title}"`)
   })
-    .then(() => {
-      if (!document.querySelector('#APP')) {
-        const body = document.querySelector('body')
-        const app = document.createElement('div')
-        app.id = 'APP'
-        body.appendChild(app)
-      }
-      console.info('create app')
-      return true
-    })
-    .then(() => {
-      console.info('start mouting')
-      render(<ContentScripts />, document.querySelector('#APP'))
-      console.info('mounted')
-    })
-}
 
-mountApp()
+  // mount component to context window
+  const container = document.createElement('div')
+  container.className = 'webext-template'
+  document.body.appendChild(container)
+  render(<App />, container)
+})()

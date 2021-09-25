@@ -14,7 +14,9 @@ async function stubIndexHtml() {
     await fs.ensureDir(r(`extension/dist/${view}`))
     let data = await fs.readFile(r(`src/${view}/index.html`), 'utf-8')
     data = data
-      .replace('"./main.tsx"', `"http://localhost:${port}/${view}/main.tsx"`)
+      .replace(/".\/main.(tsx?)"/g, (_match, p1) => {
+        return `"http://localhost:${port}/${view}/main.${p1}"`
+      })
       .replace(
         /<!-- hmr -->/g,
         `<script type="module" src="http://localhost:${port}/hmr.ts"></script>`,
