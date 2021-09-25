@@ -19,7 +19,9 @@
     "start:firefox": "web-ext run --source-dir ./extension --target=firefox-desktop",
     "clear": "rimraf extension/dist extension/manifest.json extension.*",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ci:publish": "pnpx changeset publish",
+    "ci:version": "pnpx changeset version"
   },
   "lint-staged": {
     "**/**/*.{js,ts,tsx,vue,json}": [
