@@ -10,11 +10,11 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 ## Features
 
 - ⚡️ **Instant HMR** - use **Vite** on dev (no more refresh!)
-- 🥝 React
-- 💬 Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
+- 🌐 React
+- 💬 Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge)
 - 🍃 [Windi CSS](https://windicss.org/) - on-demand CSS utilities
 - 🦾 [TypeScript](https://www.typescriptlang.org/) - type safe
-- 🖥 Content Script - Use Vue even in content script
+- 🖥 Content Script - Use React even in content script
 - 🌍 WebExtension - isomorphic extension for Chrome, Firefox, and others
 - 📃 Dynamic `manifest.json` with full type support
 
@@ -44,7 +44,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - `src` - main source.
   - `contentScript` - scripts and components to be injected as `content_script`
   - `background` - scripts for background.
-  - `components` - auto-imported Vue components that shared in popup and options page.
+  - `components` - auto-imported React components that shared in popup and options page.
   - `styles` - styles shared in popup and options page
   - `manifest.ts` - manifest for the extension.
 - `extension` - extension package root.
