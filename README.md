@@ -79,3 +79,10 @@ pnpm build
 ```
 
 And then pack files under `extension`, you can upload `extension.crx` or `extension.xpi` to appropriate extension store.
+
+# 
+<div align='right'>
+
+*built with ❤️ by [😼](https://github.com/spring-catponents/templates)*
+
+</div>
