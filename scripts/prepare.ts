@@ -21,7 +21,7 @@ async function stubIndexHtml() {
         /<!-- hmr -->/g,
         `<script type="module" src="http://localhost:${port}/hmr.ts"></script>`,
       )
-      .replace('<div id="app"></div>', '<div id="app">Vite server did not start</div>')
+      .replace('<div id="root"></div>', '<div id="root">Vite server did not start</div>')
     await fs.writeFile(r(`extension/dist/${view}/index.html`), data, 'utf-8')
     log('PRE', `stub ${view}`)
   }
