@@ -1,5 +1,11 @@
 # @aiou/webext-template
 
+## 0.1.2
+
+### Patch Changes
+
+- 26afae9: fix hmr in option pages
+
 ## 0.1.1
 
 ### Patch Changes
