@@ -2,7 +2,8 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - v2
+      - v3
 env:
   CI: true
 jobs:
