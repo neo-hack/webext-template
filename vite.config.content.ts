@@ -1,9 +1,6 @@
 import { defineConfig } from 'vite'
-import WindiCSS from 'vite-plugin-windicss'
-import StyledWindiCSS from 'vite-plugin-styled-windicss'
 import { sharedConfig } from './vite.config'
-import { r, isDev } from './scripts/utils'
-import windiConfig from './windi.config'
+import { isDev, r } from './scripts/utils'
 
 // bundling the content script using Vite
 export default defineConfig({
@@ -28,17 +25,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    ...sharedConfig.plugins!,
-
-    // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS({
-      config: {
-        ...windiConfig,
-        // disable preflight to avoid css population
-        preflight: false,
-      },
-    }),
-    StyledWindiCSS(),
-  ],
+  plugins: [...sharedConfig.plugins!],
 })

@@ -1,6 +1,8 @@
 # @aiou/webext-template
 *a fork version of [vitesse-webext](https://github.com/antfu/vitesse-webext), but with react*
 
+*thanks to awesome work https://github.com/xlzy520/vitesse-webext/tree/refactor/mv3 support chrome manifest v3*
+
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
 
 [![npm](https://img.shields.io/npm/v/@aiou/webext-template)](https://github.com/spring-catponents/webext-template) [![GitHub](https://img.shields.io/github/license/spring-catponents/webext-template)](https://github.com/spring-catponents/webext-template) [![stackblitz](https://img.shields.io/badge/%E2%9A%A1%EF%B8%8Fstackblitz-online-blue)](https://github.com/spring-catponents/webext-template)
@@ -12,7 +14,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - ⚡️ **Instant HMR** - use **Vite** on dev (no more refresh!)
 - 🌐 React
 - 💬 Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge)
-- 🍃 [Windi CSS](https://windicss.org/) - on-demand CSS utilities
+- 🍃 [tailwindcss](https://tailwindcss.come/) - on-demand CSS utilities
 - 🦾 [TypeScript](https://www.typescriptlang.org/) - type safe
 - 🖥 Content Script - Use React even in content script
 - 🌍 WebExtension - isomorphic extension for Chrome, Firefox, and others
@@ -24,29 +26,6 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 - [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) - WebExtension browser API Polyfill with types
 - [`webext-bridge`](https://github.com/antfu/webext-bridge) - effortlessly communication between contexts
-
-### UI Frameworks
-
-- [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
-
-**⚗️ experimental**
-
-Combine [Windi CSS](https://github.com/windicss/windicss) and [styled-components](https://styled-components.com/) by [styled-plugin-windicss](https://github.com/JiangWeixian/vite-plugin-styled-windicss), it will translate
-
-```ts
-// input
-const Wrapped = styled.div`
-  @apply m-0 p-0 w-100vw h-100vh overflow-hidden;
-`
-// output
-const Wrapped = styled.div`
-  color: red;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-  width: 100vw;
-`
-```
 
 ### Dev tools
 

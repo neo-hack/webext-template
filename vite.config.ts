@@ -1,10 +1,10 @@
-import { defineConfig, UserConfig } from 'vite'
+import { defineConfig } from 'vite'
+import type { UserConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import WindiCSS from 'vite-plugin-windicss'
-import StyledWindiCSS from 'vite-plugin-styled-windicss'
-import react from '@vitejs/plugin-react-refresh'
-import windiConfig from './windi.config'
-import { r, port, isDev } from './scripts/utils'
+import react from '@vitejs/plugin-react'
+import replace from '@rollup/plugin-replace'
+import { MV3Hmr } from './vite-mv-hmr'
+import { isDev, port, r } from './scripts/utils'
 
 export const sharedConfig: UserConfig = {
   root: r('src'),
@@ -25,6 +25,15 @@ export const sharedConfig: UserConfig = {
         },
       ],
       dts: r('src/auto-imports.d.ts'),
+    }),
+
+    // @ts-expect-error -- rollup conflict with tsup rollup
+    replace({
+      preventAssignment: true,
+      values: {
+        __DEV__: JSON.stringify(isDev),
+        'process.env.NODE_ENV': JSON.stringify(isDev ? 'development' : 'production'),
+      },
     }),
 
     // rewrite assets to use relative path
@@ -60,9 +69,9 @@ export default defineConfig(({ command }) => {
       terserOptions: {
         mangle: false,
       },
+      minify: 'terser',
       rollupOptions: {
         input: {
-          background: r('src/background/index.html'),
           options: r('src/options/index.html'),
           popup: r('src/popup/index.html'),
         },
@@ -70,12 +79,8 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       ...sharedConfig.plugins!,
-
-      // https://github.com/antfu/vite-plugin-windicss
-      WindiCSS({
-        config: windiConfig,
-      }),
-      StyledWindiCSS(),
+      // popup & options page hmr
+      MV3Hmr(),
     ],
   }
 })

@@ -1,3 +1,23 @@
 {
-  "extends": "@aiou"
+  "extends": "@aiou",
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          // ignore dev scripts
+          "**/scripts/**/*.{js,jsx,ts,tsx,cjs,mjs}",
+          "**/*.test.{js,jsx,ts,tsx,cjs,mjs}",
+          "**/*.spec.{js,jsx,ts,tsx,mjs,cjs}",
+          "**/*.config**.{js,jsx,ts,tsx,cjs,mjs}",
+          "src/manifest.ts",
+          // service worker need bundle all code into one files
+          "src/background/main.ts",
+          // ignore require third packages in .eslintrc.* e.g. eslint-define-config
+          "**/.eslintrc.{js,cjs,mjs}"
+        ]
+      }
+    ]
+  }
 }

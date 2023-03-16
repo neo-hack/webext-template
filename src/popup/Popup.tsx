@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Container } from './style'
+import './style.css'
 
 export function Popup() {
   const [count, setCount] = useState(0)
 
   return (
-    <Container>
+    <div className="container">
       <header className="App-header">
         <img src="/assets/logo.svg" className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
@@ -37,6 +37,6 @@ export function Popup() {
           </a>
         </p>
       </header>
-    </Container>
+    </div>
   )
 }

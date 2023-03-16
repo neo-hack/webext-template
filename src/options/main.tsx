@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import 'virtual:windi.css'
-import { Options } from './Options'
+import { createRoot } from 'react-dom/client'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Options />
-  </React.StrictMode>,
-  document.getElementById('root'),
+import { Options } from './Options'
+import './style.css'
+
+const root = createRoot(document.getElementById('root')!)
+
+root.render(
+  <Options />,
 )
