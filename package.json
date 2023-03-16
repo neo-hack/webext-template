@@ -43,8 +43,8 @@
     "clear": "rimraf extension",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
-    "ci:publish": "pnpx changeset publish",
-    "ci:version": "pnpx changeset version"
+    "ci:publish": "pnpm changeset publish",
+    "ci:version": "pnpm changeset version"
   },
   "lint-staged": {
     "**/**/*.{js,ts,tsx,vue,json}": ["eslint --fix"]
