@@ -1,5 +1,11 @@
 # @aiou/webext-template
 
+## 0.2.1
+
+### Patch Changes
+
+- 2c964b7: bundle all packages into background bundle
+
 ## 0.2.0
 
 ### Minor Changes
