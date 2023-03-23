@@ -7,6 +7,8 @@ export default defineConfig(() => ({
     ...(isDev ? { mv3client: './scripts/client.ts' } : {}),
   },
   outDir: 'extension/dist',
+  // bundle all imported packages into bundle(background.ts)
+  noExternal: [/./],
   format: ['esm'],
   target: 'esnext',
   ignoreWatch: ['**/extension/**'],
