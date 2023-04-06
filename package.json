@@ -13,13 +13,13 @@
   ],
   "license": "MIT",
   "packageManager": "pnpm@7.23.0",
-  "homepage": "https://github.com/spring-catponents/webext-template",
+  "homepage": "https://github.com/neo-hack/webext-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spring-catponents/webext-template"
+    "url": "https://github.com/neo-hack/webext-template"
   },
   "bugs": {
-    "url": "https://github.com/spring-catponents/webext-template/issues",
+    "url": "https://github.com/neo-hack/webext-template/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
@@ -88,5 +88,8 @@
     "web-ext": "^6.3.0",
     "webext-bridge": "^4.1.1",
     "webextension-polyfill": "^0.8.0"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

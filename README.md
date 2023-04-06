@@ -5,7 +5,7 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
 
-[![npm](https://img.shields.io/npm/v/@aiou/webext-template)](https://github.com/spring-catponents/webext-template) [![GitHub](https://img.shields.io/github/license/spring-catponents/webext-template)](https://github.com/spring-catponents/webext-template) [![stackblitz](https://img.shields.io/badge/%E2%9A%A1%EF%B8%8Fstackblitz-online-blue)](https://github.com/spring-catponents/webext-template)
+[![npm](https://img.shields.io/npm/v/@aiou/webext-template)](https://github.com/neo-hack/webext-template) [![GitHub](https://img.shields.io/github/license/neo-hack/webext-template)](https://github.com/neo-hack/webext-template) [![stackblitz](https://img.shields.io/badge/%E2%9A%A1%EF%B8%8Fstackblitz-online-blue)](https://github.com/neo-hack/webext-template)
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/github/JiangWeixian/templates/tree/master/packages/webext-template)
 
@@ -81,6 +81,6 @@ And then pack files under `extension`, you can upload `extension.crx` or `extens
 # 
 <div align='right'>
 
-*built with ❤️ by [😼](https://github.com/spring-catponents/templates)*
+*built with ❤️ by [😼](https://github.com/neo-hack/templates)*
 
 </div>
