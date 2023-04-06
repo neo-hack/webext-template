@@ -1,5 +1,12 @@
 # @aiou/webext-template
 
+## 0.2.2
+
+### Patch Changes
+
+- bb2bc04: update workflow permissions
+- bb2bc04: require node16 & disable minify on dev mode
+
 ## 0.2.1
 
 ### Patch Changes
