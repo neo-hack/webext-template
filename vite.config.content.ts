@@ -12,6 +12,7 @@ export default defineConfig({
         }
       : undefined,
     outDir: r('extension/dist/contentScripts'),
+    minify: !isDev,
     cssCodeSplit: false,
     emptyOutDir: false,
     sourcemap: isDev ? 'inline' : false,

@@ -68,6 +68,10 @@ export default defineConfig(({ command }) => {
       // https://developer.chrome.com/docs/webstore/program_policies/#:~:text=Code%20Readability%20Requirements
       terserOptions: {
         mangle: false,
+        compress: {
+          drop_console: !isDev,
+          drop_debugger: !isDev,
+        },
       },
       minify: 'terser',
       rollupOptions: {
