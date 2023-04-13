@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     watch: isDev
       ? {
-          include: [r('src/contentScripts/**/*')],
+          include: [r('src/contentScripts/**/*'), r('src/components/**/*'), r('src/logic/**/*'), r('src/styles/**/*')],
         }
       : undefined,
     outDir: r('extension/dist/contentScripts'),
