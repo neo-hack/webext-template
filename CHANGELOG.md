@@ -1,5 +1,11 @@
 # @aiou/webext-template
 
+## 0.2.3
+
+### Patch Changes
+
+- 49495dc: watch components & logic & styles folders
+
 ## 0.2.2
 
 ### Patch Changes
